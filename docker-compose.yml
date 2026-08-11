@@ -1,0 +1,138 @@
+services:
+
+  postgres-auth:
+    image: postgres:16-alpine
+    container_name: postgres-auth
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${AUTH_DB_USER}
+      POSTGRES_PASSWORD: ${AUTH_DB_PASSWORD}
+      POSTGRES_DB: ${AUTH_DB_NAME}
+    ports:
+      - "${AUTH_DB_PORT}:5432"
+    volumes:
+      - postgres_auth_data:/var/lib/postgresql/data
+    networks:
+      - video-net
+
+  postgres-video:
+    image: postgres:16-alpine
+    container_name: postgres-video
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${VIDEO_DB_USER}
+      POSTGRES_PASSWORD: ${VIDEO_DB_PASSWORD}
+      POSTGRES_DB: ${VIDEO_DB_NAME}
+    ports:
+      - "${VIDEO_DB_PORT}:5432"
+    volumes:
+      - postgres_video_data:/var/lib/postgresql/data
+    networks:
+      - video-net
+
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minio_admin
+      MINIO_ROOT_PASSWORD: minio_password
+      MINIO_NOTIFY_KAFKA_ENABLE_PRIMARY: "on"
+      MINIO_NOTIFY_KAFKA_BROKERS_PRIMARY: "kafka:9092"
+      MINIO_NOTIFY_KAFKA_TOPIC_PRIMARY: "minio.video.uploaded"
+      
+    ports:
+      - "9000:9000"   # API
+      - "9001:9001"   # Console web
+    volumes:
+      - minio_data:/data
+    networks:
+      - video-net
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.1
+    container_name: kafka
+    restart: unless-stopped
+    ports:
+      - "9092:9092"       # listener externo (host)
+      - "29092:29092"     # listener interno (rede docker)
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: "1@kafka:9093"
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,EXTERNAL://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks:
+      - video-net
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    restart: unless-stopped
+    depends_on:
+      - kafka
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
+    networks:
+      - video-net
+
+  auth-service:
+    build:
+      context: ./AuthService
+      dockerfile: Dockerfile.dev
+    container_name: auth-service
+    restart: unless-stopped
+    ports:
+      - "${AUTH_SERVICE_PORT}:80"
+    volumes:
+      - ./AuthService:/app
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1   # necessário no Windows/WSL/Mac pra detectar mudança de arquivo corretamente
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionStrings__AuthDb=Host=${AUTH_DB_HOST};Port=${AUTH_DB_PORT};Database=${AUTH_DB_NAME};Username=${AUTH_DB_USER};Password=${AUTH_DB_PASSWORD}
+    depends_on:
+      - postgres-auth
+    networks:
+      - video-net
+
+  bff:
+    build:
+      context: ./BFF
+      dockerfile: Dockerfile.dev
+    container_name: bff
+    restart: unless-stopped
+    ports:
+      - "${BFF_PORT}:80"
+    volumes:
+      - ./BFF:/app
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+    depends_on:
+      - auth-service
+    networks:
+      - video-net
+
+networks:
+  video-net:
+    driver: bridge
+
+volumes:
+  postgres_auth_data:
+  postgres_video_data:
+  minio_data:
+  kafka_data:

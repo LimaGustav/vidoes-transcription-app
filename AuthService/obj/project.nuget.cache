@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "oVHwwZua+eo=",
+  "success": false,
+  "projectFilePath": "/app/AuthService.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Unable to load the service index for source https://api.nuget.org/v3/index.json.\n  Resource temporarily unavailable (api.nuget.org:443)\n  Resource temporarily unavailable",
+      "projectPath": "/app/AuthService.csproj",
+      "filePath": "/app/AuthService.csproj",
+      "targetGraphs": []
+    }
+  ]
+}
