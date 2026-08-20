@@ -1,5 +1,86 @@
 services:
 
+  # =============================================
+  # APPLICATION SERVICES
+  # =============================================
+
+  auth-service:
+    build:
+      context: ./AuthService
+      dockerfile: Dockerfile
+    container_name: auth-service
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__AuthDb: "Host=${AUTH_DB_HOST};Port=${AUTH_DB_PORT};Database=${AUTH_DB_NAME};Username=${AUTH_DB_USER};Password=${AUTH_DB_PASSWORD}"
+    ports:
+      - "${AUTH_SERVICE_PORT}:8080"
+    depends_on:
+      - postgres-auth
+    networks:
+      - video-net
+
+
+  video-service:
+    build:
+      context: ./VideoService
+      dockerfile: Dockerfile
+    container_name: video-service
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__VideoServiceDb: "Host=${VIDEO_DB_HOST};Port=${VIDEO_DB_PORT};Database=${VIDEO_DB_NAME};Username=${VIDEO_DB_USER};Password=${VIDEO_DB_PASSWORD}"
+    ports:
+      - "8083:8080"
+    depends_on:
+      - postgres-video
+      - kafka
+      - minio
+    networks:
+      - video-net
+
+
+  video-processor-worker:
+    build:
+      context: ./VideoProcessorWorker
+      dockerfile: Dockerfile
+    container_name: video-processor-worker
+    restart: unless-stopped
+    environment:
+      DOTNET_ENVIRONMENT: Development
+      ConnectionStrings__VideoServiceDb: "Host=${VIDEO_DB_HOST};Port=${VIDEO_DB_PORT};Database=${VIDEO_DB_NAME};Username=${VIDEO_DB_USER};Password=${VIDEO_DB_PASSWORD}"
+    depends_on:
+      - postgres-video
+      - kafka
+      - minio
+    networks:
+      - video-net
+
+
+  bff:
+    build:
+      context: ./BFF
+      dockerfile: Dockerfile
+    container_name: bff
+    restart: unless-stopped
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+    ports:
+      - "${BFF_PORT}:8080"
+    depends_on:
+      - auth-service
+      - video-service
+    networks:
+      - video-net
+
+
+  # =============================================
+  # POSTGRES - AUTH
+  # =============================================
+
   postgres-auth:
     image: postgres:16-alpine
     container_name: postgres-auth
@@ -14,6 +95,11 @@ services:
       - postgres_auth_data:/var/lib/postgresql/data
     networks:
       - video-net
+
+
+  # =============================================
+  # POSTGRES - VIDEO
+  # =============================================
 
   postgres-video:
     image: postgres:16-alpine
@@ -30,6 +116,11 @@ services:
     networks:
       - video-net
 
+
+  # =============================================
+  # MINIO
+  # =============================================
+
   minio:
     image: minio/minio:latest
     container_name: minio
@@ -41,10 +132,9 @@ services:
       MINIO_NOTIFY_KAFKA_ENABLE_PRIMARY: "on"
       MINIO_NOTIFY_KAFKA_BROKERS_PRIMARY: "kafka:29092"
       MINIO_NOTIFY_KAFKA_TOPIC_PRIMARY: "minio.video.uploaded"
-      
     ports:
-      - "127.0.0.1:9000:9000"   # API
-      - "127.0.0.1:9001:9001"   # Console web
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9001:9001"
     volumes:
       - minio_data:/data
     healthcheck:
@@ -56,13 +146,18 @@ services:
     networks:
       - video-net
 
+
+  # =============================================
+  # KAFKA
+  # =============================================
+
   kafka:
     image: confluentinc/cp-kafka:7.6.1
     container_name: kafka
     restart: unless-stopped
     ports:
-      - "9092:9092"       # listener externo (host)
-      - "29092:29092"     # listener interno (rede docker)
+      - "9092:9092"
+      - "29092:29092"
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
@@ -82,6 +177,11 @@ services:
     networks:
       - video-net
 
+
+  # =============================================
+  # KAFKA UI
+  # =============================================
+
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
     container_name: kafka-ui
@@ -96,52 +196,19 @@ services:
     networks:
       - video-net
 
-  auth-service:
-    build:
-      context: ./AuthService
-      dockerfile: Dockerfile.dev
-    container_name: auth-service
-    restart: unless-stopped
-    ports:
-      - "${AUTH_SERVICE_PORT}:80"
-    volumes:
-      - ./AuthService:/app
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
-    environment:
-      - DOTNET_USE_POLLING_FILE_WATCHER=1   # necessário no Windows/WSL/Mac pra detectar mudança de arquivo corretamente
-      - ASPNETCORE_URLS=http://0.0.0.0:80
-      - ConnectionStrings__AuthDb=Host=${AUTH_DB_HOST};Port=${AUTH_DB_PORT};Database=${AUTH_DB_NAME};Username=${AUTH_DB_USER};Password=${AUTH_DB_PASSWORD}
-    depends_on:
-      - postgres-auth
-    networks:
-      - video-net
 
-  bff:
-    build:
-      context: ./BFF
-      dockerfile: Dockerfile.dev
-    container_name: bff
-    restart: unless-stopped
-    ports:
-      - "${BFF_PORT}:80"
-    volumes:
-      - ./BFF:/app
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
-    environment:
-      - DOTNET_USE_POLLING_FILE_WATCHER=1
-      - ASPNETCORE_URLS=http://0.0.0.0:80
-    depends_on:
-      - auth-service
-    networks:
-      - video-net
+# =============================================
+# NETWORK
+# =============================================
 
 networks:
   video-net:
     driver: bridge
+
+
+# =============================================
+# VOLUMES
+# =============================================
 
 volumes:
   postgres_auth_data:

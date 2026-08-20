@@ -106,8 +106,7 @@
               "RelativeToolTip": "Constants\\VideoStatusConstants.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T22:40:13.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T22:40:13.904Z"
             },
             {
               "$type": "Document",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "Infrastructure\\Persistence\\Repositories\\VideoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-11T14:57:28.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T14:57:28.643Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-10T16:28:57.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-10T16:28:57.872Z"
             },
             {
               "$type": "Document",
@@ -157,8 +154,7 @@
               "RelativeToolTip": "Interfaces\\IVideoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T23:37:15.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-10T23:37:15.478Z"
             },
             {
               "$type": "Document",
@@ -170,8 +166,7 @@
               "RelativeToolTip": "Application\\Services\\GetVideoStreamUrlHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-10T23:38:05.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-10T23:38:05.291Z"
             },
             {
               "$type": "Document",
@@ -183,8 +178,7 @@
               "RelativeToolTip": "VideoService.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-07T22:42:16.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-07T22:42:16.697Z"
             },
             {
               "$type": "Document",
