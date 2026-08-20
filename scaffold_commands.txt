@@ -1,0 +1,51 @@
+# ==============================================================================
+# COMANDOS DE EF CORE SCAFFOLD (DATABASE FIRST)
+# ==============================================================================
+# Observação: Certifique-se de que a ferramenta dotnet-ef esteja instalada:
+# dotnet tool install --global dotnet-ef (ou dotnet tool update --global dotnet-ef)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. AUTH SERVICE
+# ------------------------------------------------------------------------------
+# Connection String: Host=localhost;Port=5433;Database=auth_db;Username=auth_user;Password=auth_pass
+# DbContext: AuthDbContext
+# Provedor: Npgsql.EntityFrameworkCore.PostgreSQL
+
+# Execute dentro da pasta /AuthService:
+dotnet ef dbcontext scaffold "Host=localhost;Port=5433;Database=auth_db;Username=auth_user;Password=auth_pass" Npgsql.EntityFrameworkCore.PostgreSQL --context AuthDbContext --output-dir Infrastructure/Persistence/Entities --context-dir Infrastructure/Persistence/Context --force
+
+# Ou execute da raiz da solução apontando para o projeto:
+dotnet ef dbcontext scaffold "Host=localhost;Port=5433;Database=auth_db;Username=auth_user;Password=auth_pass" Npgsql.EntityFrameworkCore.PostgreSQL --project ./AuthService/AuthService.csproj --context AuthDbContext --output-dir Infrastructure/Persistence/Entities --context-dir Infrastructure/Persistence/Context --force
+
+
+# ------------------------------------------------------------------------------
+# 2. VIDEO SERVICE
+# ------------------------------------------------------------------------------
+# Connection String: Host=localhost;Port=5434;Database=video_db;Username=video_user;Password=video_pass
+# DbContext: VideoDbContext
+# Provedor: Npgsql.EntityFrameworkCore.PostgreSQL
+
+# Execute dentro da pasta /VideoService:
+dotnet ef dbcontext scaffold "Host=localhost;Port=5434;Database=video_db;Username=video_user;Password=video_pass" Npgsql.EntityFrameworkCore.PostgreSQL --context VideoDbContext --output-dir Infrastructure/Persistence/Entities --context-dir Infrastructure/Persistence/Contexts --force
+
+# Ou execute da raiz da solução apontando para o projeto:
+dotnet ef dbcontext scaffold "Host=localhost;Port=5434;Database=video_db;Username=video_user;Password=video_pass" Npgsql.EntityFrameworkCore.PostgreSQL --project ./VideoService/VideoService.csproj --context VideoDbContext --output-dir Infrastructure/Persistence/Entities --context-dir Infrastructure/Persistence/Contexts --force
+
+
+# ------------------------------------------------------------------------------
+# 3. VIDEO PROCESSOR WORKER
+# ------------------------------------------------------------------------------
+# Connection String: Host=localhost;Port=5434;Database=video_db;Username=video_user;Password=video_pass
+# DbContext: VideoDbContext (ou VideoProcessorDbContext)
+# Provedor: Npgsql.EntityFrameworkCore.PostgreSQL
+#
+# Pré-requisito (instalar os pacotes necessários no VideoProcessorWorker caso ainda não possua):
+# dotnet add VideoProcessorWorker/VideoProcessorWorker.csproj package Npgsql.EntityFrameworkCore.PostgreSQL
+# dotnet add VideoProcessorWorker/VideoProcessorWorker.csproj package Microsoft.EntityFrameworkCore.Design
+
+# Execute dentro da pasta /VideoProcessorWorker:
+dotnet ef dbcontext scaffold "Host=localhost;Port=5434;Database=video_db;Username=video_user;Password=video_pass" Npgsql.EntityFrameworkCore.PostgreSQL --context VideoDbContext --output-dir Infra/Persistence/Entities --context-dir Infra/Persistence/Contexts --force
+
+# Ou execute da raiz da solução apontando para o projeto:
+dotnet ef dbcontext scaffold "Host=localhost;Port=5434;Database=video_db;Username=video_user;Password=video_pass" Npgsql.EntityFrameworkCore.PostgreSQL --project ./VideoProcessorWorker/VideoProcessorWorker.csproj --context VideoDbContext --output-dir Infra/Persistence/Entities --context-dir Infra/Persistence/Contexts --force

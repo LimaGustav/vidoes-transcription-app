@@ -1,5 +1,6 @@
-﻿using VideoService.Domains;
+﻿using VideoService.Constants;
 using VideoService.DTOs;
+using VideoService.Infrastructure.Persistence.Entities;
 using VideoService.Interfaces;
 
 namespace VideoService.Application.Services
@@ -34,7 +35,7 @@ namespace VideoService.Application.Services
                 MinioBucket = Bucket,
                 MinioObjectKey = objectKey,
                 ContentType = request.ContentType,
-                Status = VideoStatus.PendingUpload,
+                Status = VideoStatusConstants.PendingUpload,
                 CreatedAt = now,
                 UpdatedAt = now
             };
@@ -52,11 +53,21 @@ namespace VideoService.Application.Services
             };
         }
 
-        private static string GetExtension(string contentType) => contentType switch
+        private static string GetExtension(string contentType) => contentType?.ToLowerInvariant() switch
         {
             "video/mp4" => ".mp4",
             "video/webm" => ".webm",
             "video/quicktime" => ".mov",
+            "video/x-msvideo" or "video/avi" => ".avi",
+            "video/x-matroska" or "video/mkv" => ".mkv",
+            "video/x-ms-wmv" => ".wmv",
+            "video/x-flv" or "video/flv" => ".flv",
+            "video/mpeg" => ".mpeg",
+            "video/3gpp" => ".3gp",
+            "video/3gpp2" => ".3g2",
+            "video/ogg" => ".ogv",
+            "video/mp2t" => ".ts",
+            "video/x-m4v" => ".m4v",
             _ => throw new ArgumentException($"Unsupported content type: {contentType}")
         };
     }

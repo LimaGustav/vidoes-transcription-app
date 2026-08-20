@@ -153,7 +153,6 @@ C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\o
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\obj\Debug\net10.0\ref\VideoService.dll
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\AWSSDK.Core.dll
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\AWSSDK.S3.dll
-C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -163,3 +162,4 @@ C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\b
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\bin\Debug\net10.0\Scalar.AspNetCore.dll
+C:\Users\OLIMPIADA2024\Desktop\DistributedProjects\VideoStreaming\VideoService\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

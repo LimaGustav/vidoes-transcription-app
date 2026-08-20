@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\authservice\\authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|solutionrelative:authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\authservice\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -75,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|solutionrelative:interfaces\\ijwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\authservice\\authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|solutionrelative:authservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\authservice\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BDE843B-6C3A-DF3D-4B0D-1EE5DDE2C18D}|AuthService.csproj|solutionrelative:repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -102,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,19 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmailAlreadyExistsException.cs",
-              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\EmailAlreadyExistsException.cs",
-              "RelativeDocumentMoniker": "Exceptions\\EmailAlreadyExistsException.cs",
-              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\EmailAlreadyExistsException.cs",
-              "RelativeToolTip": "Exceptions\\EmailAlreadyExistsException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T00:15:34.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\DTOs\\LoginRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\LoginRequest.cs",
@@ -134,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\DTOs\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "DTOs\\RegisterRequest.cs",
@@ -152,14 +140,14 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACsAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-06T23:49:53.399Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -167,12 +155,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-06T23:49:48.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T23:49:48.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
@@ -180,12 +167,11 @@
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-07T01:00:32.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-07T01:00:32.114Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -193,12 +179,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAwwCMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-07T00:18:14.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-07T00:18:14.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Infrastructure\\Security\\JwtSettings.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Security\\JwtSettings.cs",
@@ -206,12 +191,11 @@
               "RelativeToolTip": "Infrastructure\\Security\\JwtSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T23:52:55.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T23:52:55.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Infrastructure\\Security\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Security\\JwtTokenService.cs",
@@ -219,12 +203,35 @@
               "RelativeToolTip": "Infrastructure\\Security\\JwtTokenService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T23:53:16.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-06T23:53:16.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.csproj",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\AuthService.csproj",
+              "RelativeDocumentMoniker": "AuthService.csproj",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\AuthService.csproj",
+              "RelativeToolTip": "AuthService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-06T20:44:36.06Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "EmailAlreadyExistsException.cs",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\EmailAlreadyExistsException.cs",
+              "RelativeDocumentMoniker": "Exceptions\\EmailAlreadyExistsException.cs",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\EmailAlreadyExistsException.cs",
+              "RelativeToolTip": "Exceptions\\EmailAlreadyExistsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-07T00:15:34.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AccessLevelNotFoundException.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\AccessLevelNotFoundException.cs",
               "RelativeDocumentMoniker": "Exceptions\\AccessLevelNotFoundException.cs",
@@ -236,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "InvalidCredentialsException.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\InvalidCredentialsException.cs",
               "RelativeDocumentMoniker": "Exceptions\\InvalidCredentialsException.cs",
@@ -248,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AuthServiceHandler.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Application\\Services\\AuthServiceHandler.cs",
               "RelativeDocumentMoniker": "Application\\Services\\AuthServiceHandler.cs",
@@ -260,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserInactiveException.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\UserInactiveException.cs",
               "RelativeDocumentMoniker": "Exceptions\\UserInactiveException.cs",
@@ -272,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "AppException .cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Exceptions\\AppException .cs",
               "RelativeDocumentMoniker": "Exceptions\\AppException .cs",
@@ -284,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IAuthService.cs",
@@ -296,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IPasswordHasherService.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Interfaces\\IPasswordHasherService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IPasswordHasherService.cs",
@@ -308,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IJwtTokenService.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Interfaces\\IJwtTokenService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IJwtTokenService.cs",
@@ -332,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "PasswordHasherService.cs",
               "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\Infrastructure\\Security\\PasswordHasherService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Security\\PasswordHasherService.cs",
@@ -377,18 +384,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-06T23:57:47.067Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AuthService.csproj",
-              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\AuthService.csproj",
-              "RelativeDocumentMoniker": "AuthService.csproj",
-              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\AuthService\\AuthService.csproj",
-              "RelativeToolTip": "AuthService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-08-06T20:44:36.06Z"
             }
           ]
         }

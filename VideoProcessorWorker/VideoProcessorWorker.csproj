@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-VideoProcessorWorker-8f919b61-441c-4ef4-a491-79484aaae556</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.102.1" />
+    <PackageReference Include="Confluent.Kafka" Version="2.15.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+    <PackageReference Include="Whisper.net" Version="1.9.1" />
+    <PackageReference Include="Whisper.net.Runtime.Cuda.Windows" Version="1.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\GenerateSubtitles\" />
+    <Folder Include="Infra\Messaging\" />
+    <Folder Include="Services\Audio\" />
+    <Folder Include="Infra\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Transcription\" />
+    <Folder Include="Infra\Storage\" />
+  </ItemGroup>
+</Project>

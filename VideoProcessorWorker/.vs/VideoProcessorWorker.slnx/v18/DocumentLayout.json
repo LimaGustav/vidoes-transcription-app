@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\application\\generatesubtitles\\generatesubtitlesusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:application\\generatesubtitles\\generatesubtitlesusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\application\\generatesubtitles\\igeneratesubtitlesusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:application\\generatesubtitles\\igeneratesubtitlesusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\application\\generatesubtitles\\minionotificationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:application\\generatesubtitles\\minionotificationevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\services\\audio\\ffmpegaudioextractionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:services\\audio\\ffmpegaudioextractionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\infra\\persistence\\entities\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:infra\\persistence\\entities\\video.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|c:\\users\\olimpiada2024\\desktop\\distributedprojects\\videostreaming\\videoprocessorworker\\videoprocessorworker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D0B5A288-79B7-348A-AE3F-D5787DDC58DD}|VideoProcessorWorker.csproj|solutionrelative:videoprocessorworker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Worker.cs",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Worker.cs",
+              "RelativeDocumentMoniker": "Worker.cs",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Worker.cs",
+              "RelativeToolTip": "Worker.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowFQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T12:19:56.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IGenerateSubtitlesUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Application\\GenerateSubtitles\\IGenerateSubtitlesUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\GenerateSubtitles\\IGenerateSubtitlesUseCase.cs",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Application\\GenerateSubtitles\\IGenerateSubtitlesUseCase.cs",
+              "RelativeToolTip": "Application\\GenerateSubtitles\\IGenerateSubtitlesUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T12:17:17.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MinioNotificationEvent.cs",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Application\\GenerateSubtitles\\MinioNotificationEvent.cs",
+              "RelativeDocumentMoniker": "Application\\GenerateSubtitles\\MinioNotificationEvent.cs",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Application\\GenerateSubtitles\\MinioNotificationEvent.cs",
+              "RelativeToolTip": "Application\\GenerateSubtitles\\MinioNotificationEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T12:17:14.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenerateSubtitlesUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Application\\GenerateSubtitles\\GenerateSubtitlesUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\GenerateSubtitles\\GenerateSubtitlesUseCase.cs",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Application\\GenerateSubtitles\\GenerateSubtitlesUseCase.cs",
+              "RelativeToolTip": "Application\\GenerateSubtitles\\GenerateSubtitlesUseCase.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T12:17:03.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FfmpegAudioExtractionService.cs",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Services\\Audio\\FfmpegAudioExtractionService.cs",
+              "RelativeDocumentMoniker": "Services\\Audio\\FfmpegAudioExtractionService.cs",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Services\\Audio\\FfmpegAudioExtractionService.cs",
+              "RelativeToolTip": "Services\\Audio\\FfmpegAudioExtractionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T23:16:21.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Video.cs",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Infra\\Persistence\\Entities\\Video.cs",
+              "RelativeDocumentMoniker": "Infra\\Persistence\\Entities\\Video.cs",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\Infra\\Persistence\\Entities\\Video.cs",
+              "RelativeToolTip": "Infra\\Persistence\\Entities\\Video.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T22:32:05.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-12T20:16:38.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-12T20:16:17.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VideoProcessorWorker.csproj",
+              "DocumentMoniker": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\VideoProcessorWorker.csproj",
+              "RelativeDocumentMoniker": "VideoProcessorWorker.csproj",
+              "ToolTip": "C:\\Users\\OLIMPIADA2024\\Desktop\\DistributedProjects\\VideoStreaming\\VideoProcessorWorker\\VideoProcessorWorker.csproj",
+              "RelativeToolTip": "VideoProcessorWorker.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-12T19:37:22.182Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

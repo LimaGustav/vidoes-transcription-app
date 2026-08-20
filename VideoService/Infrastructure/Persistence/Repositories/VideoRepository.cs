@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VideoService.Domains;
 using VideoService.Infrastructure.Persistence.Contexts;
+using VideoService.Infrastructure.Persistence.Entities;
 using VideoService.Interfaces;
 
 namespace VideoService.Infrastructure.Persistence.Repositories

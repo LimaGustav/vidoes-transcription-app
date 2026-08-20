@@ -69,7 +69,7 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference(options =>
     {
         options.Authentication = new ScalarAuthenticationOptions
-        {
+        {   
             PreferredSecuritySchemes = new List<string> { "Bearer" }
         };
     });

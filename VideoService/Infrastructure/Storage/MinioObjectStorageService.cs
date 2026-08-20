@@ -14,11 +14,12 @@ public class MinioObjectStorageService : IObjectStorageService
     {
         var settings = options.Value;
 
-        var config = new AmazonS3Config
-        {
-            ServiceURL = $"{(settings.UseSsl ? "https" : "http")}://{settings.Endpoint}",
-            ForcePathStyle = true // required for MinIO (path-style, not virtual-hosted)
-        };
+            var config = new AmazonS3Config
+            {
+                ServiceURL = $"{(settings.UseSsl ? "https" : "http")}://{settings.Endpoint}",
+                ForcePathStyle = true,
+                UseHttp = !settings.UseSsl
+            };
 
         _s3Client = new AmazonS3Client(settings.AccessKey, settings.SecretKey, config);
     }
@@ -31,7 +32,8 @@ public class MinioObjectStorageService : IObjectStorageService
             Key = objectKey,
             Verb = HttpVerb.PUT,
             Expires = DateTime.UtcNow.Add(expiry),
-            ContentType = contentType
+            ContentType = contentType,
+            Protocol = Protocol.HTTP
         };
 
         return Task.FromResult(_s3Client.GetPreSignedURL(request));

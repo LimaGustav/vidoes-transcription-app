@@ -1,4 +1,4 @@
-﻿using VideoService.Domains;
+﻿using VideoService.Constants;
 using VideoService.DTOs;
 using VideoService.Interfaces;
 
@@ -22,7 +22,7 @@ namespace VideoService.Application.Services
             var video = await _videoRepository.GetByIdAsync(videoId, cancellationToken)
                 ?? throw new FileNotFoundException($"Video {videoId} not found");
 
-            if (video.Status != VideoStatus.Ready)
+            if (video.Status != VideoStatusConstants.Ready)
                 throw new InvalidOperationException($"Video {videoId} is not ready for streaming (status: {video.Status})");
 
             var streamUrl = await _storage.GeneratePresignedDownloadUrlAsync(

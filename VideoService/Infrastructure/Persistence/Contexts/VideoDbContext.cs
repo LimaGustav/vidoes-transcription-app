@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using VideoService.Domains;
+using VideoService.Infrastructure.Persistence.Entities;
 
 namespace VideoService.Infrastructure.Persistence.Contexts;
 
 public partial class VideoDbContext : DbContext
 {
+    public VideoDbContext()
+    {
+    }
+
     public VideoDbContext(DbContextOptions<VideoDbContext> options)
         : base(options)
     {
@@ -17,6 +21,10 @@ public partial class VideoDbContext : DbContext
     public virtual DbSet<Video> Videos { get; set; }
 
     public virtual DbSet<VideoChunk> VideoChunks { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("Host=localhost;Port=5434;Database=video_db;Username=video_user;Password=video_pass");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

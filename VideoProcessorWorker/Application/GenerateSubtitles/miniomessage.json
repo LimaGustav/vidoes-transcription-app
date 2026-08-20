@@ -1,0 +1,53 @@
+{
+    "EventName": "s3:ObjectCreated:Put",
+    "Key": "videos/videos/76b9045c-25c7-4ba2-a402-973b0e9efe84/original.mp4",
+    "Records": [
+        {
+            "eventVersion": "2.0",
+            "eventSource": "minio:s3",
+            "awsRegion": "",
+            "eventTime": "2026-08-12T14:07:26.593Z",
+            "eventName": "s3:ObjectCreated:Put",
+            "userIdentity": {
+                "principalId": "minio_admin"
+            },
+            "requestParameters": {
+                "principalId": "minio_admin",
+                "region": "",
+                "sourceIPAddress": "172.20.0.1"
+            },
+            "responseElements": {
+                "x-amz-id-2": "dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8",
+                "x-amz-request-id": "18CB13FAE51907A7",
+                "x-minio-deployment-id": "073d01e3-3b44-4690-bfc4-569991236e8a",
+                "x-minio-origin-endpoint": "http://172.20.0.5:9000"
+            },
+            "s3": {
+                "s3SchemaVersion": "1.0",
+                "configurationId": "Config",
+                "bucket": {
+                    "name": "videos",
+                    "ownerIdentity": {
+                        "principalId": "minio_admin"
+                    },
+                    "arn": "arn:aws:s3:::videos"
+                },
+                "object": {
+                    "key": "videos%2F76b9045c-25c7-4ba2-a402-973b0e9efe84%2Foriginal.mp4",
+                    "size": 34688910,
+                    "eTag": "dbccf0f675cf7f92f5c2e5933fc46831",
+                    "contentType": "video/mp4",
+                    "userMetadata": {
+                        "content-type": "video/mp4"
+                    },
+                    "sequencer": "18CB13FB264F93B3"
+                }
+            },
+            "source": {
+                "host": "172.20.0.1",
+                "port": "",
+                "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+            }
+        }
+    ]
+}

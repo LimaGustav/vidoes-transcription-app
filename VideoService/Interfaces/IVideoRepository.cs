@@ -1,4 +1,4 @@
-﻿using VideoService.Domains;
+﻿using VideoService.Infrastructure.Persistence.Entities;
 
 namespace VideoService.Interfaces
 {
